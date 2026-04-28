@@ -8,43 +8,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="logo.png" alt="Drive Japan Pro Logo">
-                <h1><a href="index.html">Drive Japan Pro</a></h1>
-            </div>
-            <ul>
-                <li><a href="index.html#features">Features</a></li>
-                <li><a href="index.html#languages">Languages</a></li>
-                <li><a href="index.html#study-materials">Study Materials</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="Drive Japan Pro Logo">
+                    <h1><a href="index.html">Drive Japan Pro</a></h1>
+                </div>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section>
-            <div class="language-switcher">
-                <button onclick="switchLanguage('en')">English</button>
-                <button onclick="switchLanguage('ja')">日本語</button>
-                <button onclick="switchLanguage('ne')">नेपाली</button>
-                <button onclick="switchLanguage('hi')">हिन्दी</button>
-                <button onclick="switchLanguage('ur')">اردو</button>
-                <button onclick="switchLanguage('si')">සිංහල</button>
-                <button onclick="switchLanguage('vi')">Tiếng Việt</button>
-                <button onclick="switchLanguage('km')">ខ្មែរ</button>
-            </div>
-            <div id="terms-content">
-            </div>
-        </section>
-    </main>
+        <main>
+            <section>
+                <div class="language-switcher">
+                    <button onclick="switchLanguage('en')">English</button>
+                    <button onclick="switchLanguage('ja')">日本語</button>
+                    <button onclick="switchLanguage('ne')">नेपाली</button>
+                    <button onclick="switchLanguage('hi')">हिन्दी</button>
+                    <button onclick="switchLanguage('ur')">اردو</button>
+                    <button onclick="switchLanguage('si')">සිංහල</button>
+                    <button onclick="switchLanguage('vi')">Tiếng Việt</button>
+                    <button onclick="switchLanguage('km')">ខ្មែរ</button>
+                </div>
+                <div id="terms-content">
+                </div>
+            </section>
+        </main>
 
-    <footer>
-        <p>&copy; 2023 Drive Japan Pro. All rights reserved.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2023 Drive Japan Pro. All rights reserved.</p>
+        </footer>
+    </div>
 
     <script>
         const translations = {
@@ -61,7 +60,7 @@
       },
       {
         heading: "3. Guest Access and Data",
-        content: "Drive Japan Pro uses anonymous, device-based authentication. You are responsible for maintaining the security of your device and for any activities conducted during your guest session. Progress data is tied to your specific browser or device instance; deleting the application or clearing your browser's cache will result in the permanent loss of this locally stored progress data.",
+        content: "Drive Japan Pro uses anonymous, device-based authentication. You are responsible for maintaining the security of your device and for any activities conducted during your guest session. Progress data is tied to your specific browser or device instance; deleting the application or clearing your browser\'s cache will result in the permanent loss of this locally stored progress data.",
       },
       {
         heading: "4. Intellectual Property",
@@ -285,7 +284,7 @@
       },
       {
         heading: "१०. भुक्तानी र इन-एप खरिदहरू",
-        content: "हामी एक पटकको इन-एप खरिदको रूपमा 'विज्ञापन हटाउनुहोस्' सुविधा प्रस्ताव गर्दछौं। भुक्तानीहरू Apple App Store वा Google Play Store मार्फत प्रशोधन गरिन्छ। कानूनले आवश्यक ठानेबाहेक सबै खरिदहरू अन्तिम र फिर्ता नहुने हुन्छन्। यदि तपाईंले एप पुन: स्थापना गर्नुभयो वा उपकरणहरू परिवर्तन गर्नुभयो भने, तपाईंले आफ्नो विज्ञापन-मुक्त स्थिति पुन: सक्रिय गर्न 'खरिदहरू पुनर्स्थापना गर्नुहोस्' (Restore Purchases) सुविधा प्रयोग गर्न सक्नुहुन्छ।",
+        content: "हामी एक पटकको इन-एप खरिदको रूपमा 'विज्ञापन हटाउनुहोस्' सुविधा प्रस्ताव गर्दछौं। भुक्तानीहरू Apple App Store वा Google Play Store मार्फत प्रशोधน गरिन्छ। कानूनले आवश्यक ठानेबाहेक सबै खरिदहरू अन्तिम र फिर्ता नहुने हुन्छन्। यदि तपाईंले एप पुन: स्थापना गर्नुभयो वा उपकरणहरू परिवर्तन गर्नुभयो भने, तपाईंले आफ्नो विज्ञापन-मुक्त स्थिति पुन: सक्रिय गर्न 'खरिदहरू पुनर्स्थापना गर्नुहोस्' (Restore Purchases) सुविधा प्रयोग गर्न सक्नुहुन्छ।",
       },
       {
         heading: "11. शुद्धता र दायित्वको अस्वीकरण",
@@ -351,7 +350,7 @@
       },
       {
         heading: "2. سروس اور دستبرداری کی تفصیل",
-        content: "ڈرائیو جاپان پرو صارفین کو جاپانی ڈرائیور کے لائسنس کے امتحان کی تیاری میں مدد کے لیے ڈیزائن کیے گئے پریکٹس سوالات، فلیش کارڈز، اور تعلیمی مواد فراہم کرتا ہے۔ جبکہ سروس کو ایک جامع سیکھنے کا آلہ بنانے کے لیے ڈیزائن کیا گیا ہے، مواد صرف معلوماتی اور تعلیمی مقاصد کے لیے ہے۔ ڈرائیو جاपान پرو کسی بھی سرکاری امتحان میں کامیابی کا اسکور یا کسی دوسرے سرٹیفیکیشن کے نتیجے کی ضمانت نہیں دیتا ہے۔",
+        content: "ڈرائیو جاپان پرو صارفین کو جاپانی ڈرائیور کے لائسنس کے امتحان کی تیاری میں مدد کے لیے ڈیزائن کیے گئے پریکٹس سوالات، فلیش کارڈز، اور تعلیمی مواد فراہم کرتا ہے۔ جبکہ سروس کو ایک جامع سیکھنے کا آلہ بنانے کے لیے ڈیزائن کیا گیا ہے، مواد صرف معلوماتی اور تعلیمی مقاصد کے لیے ہے۔ ڈرائیو جاپان پرو کسی بھی سرکاری امتحان میں کامیابی کا اسکور یا کسی دوسرے سرٹیفیکیشن کے نتیجے کی ضمانت نہیں دیتا ہے۔",
       },
       {
         heading: "3. گیسٹ رسائی اور ڈیٹا",
@@ -367,7 +366,7 @@
       },
       {
         heading: "6. اشتہارات",
-        content: "سروس میں اشتہارات شامل ہو سکتے ہیں، جنہیں سروس کے آپ کے استعمال یا دیگر معلومات کی بنیاد پر ہدف بنایا جا सकता ہے۔ ڈرائیو جاپان پرو کی طرف سے آپ کو سروس تک رسائی اور استعمال فراہم کرنے کے بدلے، آپ اتفاق کرتے ہیں کہ ڈرائیو جاپان پرو اور اس کے تیسرے فریق فراہم کنندگان ایسے اشتہارات دے سکتے ہیں۔ ہم مشتہر کردہ کسی بھی مصنوعات یا خدمات کی توثیق نہیں کرتے ہیں۔",
+        content: "سروس میں اشتہارات شامل ہو سکتے ہیں، جنہیں سروس کے آپ کے استعمال یا دیگر معلومات کی بنیاد پر ہدف بنایا जा सकता ہے۔ ڈرائیو جاپان پرو کی طرف سے آپ کو سروس تک رسائی اور استعمال فراہم کرنے کے بدلے، آپ اتفاق کرتے ہیں کہ ڈرائیو جاپان پرو اور اس کے تیسرے فریق فراہم کنندگان ایسے اشتہارات دے سکتے ہیں۔ ہم مشتہر کردہ کسی بھی مصنوعات یا خدمات کی توثیق نہیں کرتے ہیں۔",
       },
       {
         heading: "7. گورننگ قانون",
@@ -375,11 +374,11 @@
       },
       {
         heading: "8. شرائط میں تبدیلیاں",
-        content: "ہم اپنی صوابدید پر، بغیر کسی پیشگی اطلاع کے کسی بھی وقت ان سروس کی شرائط میں ترمیم یا اپ ڈیٹ کرنے کا حق محفوظ رکھتے ہیں۔ تازہ ترین شرائط پوسٹ کرنے کے فوراً بعد نافذ العمل ہوں گی۔ اس طرح کی کسی بھی تبدیلی کے بعد آپ کا سروس کا مسلسل استعمال نظر ثانی شدہ شرائط کی آپ کی قبولیت کو تشکیل دیتا ہے۔",
+        content: "ہم اپنی صوابدید پر، بغیر کسی پیشگی اطلاع کے کسی بھی وقت ان سروس کی شرائط میں ترمیم یا اپ ڈیٹ करने کا حق محفوظ رکھتے ہیں۔ تازہ ترین شرائط پوسٹ کرنے کے فوراً بعد نافذ العمل ہوں گی۔ اس طرح کی کسی بھی تبدیلی کے بعد آپ کا سروس کا مسلسل استعمال نظر ثانی شدہ شرائط کی آپ کی قبولیت کو تشکیل دیتا ہے۔",
       },
       {
         heading: "9. پیش رفت کو دوبارہ ترتیب دیں",
-        content: "آپ کو اپنی ترتیبات میں 'پیش رفت کو دوبارہ ترتیب دیں' کے آپشن کے ذریعے کسی بھی وقت اپنی سیکھने کی پیش رفت کو دوبارہ ترتیب دینے کا حق ہے۔ ایک بار جب آپ اس عمل کی تصدیق کر دیتے ہیں، تو یہ ناقابل واپسی ہے اور تمام ٹیسٹ کے نتائج اور پیش رفت کا ڈیٹا ہمارے سسٹم سے مستقل طور پر مٹا دیا جائے گا۔",
+        content: "آپ کو اپنی ترتیبات میں 'پیش رفت کو دوبارہ ترتیب دیں' کے آپشن کے ذریعے کسی بھی وقت اپنی سیکھने की پیش رفت کو دوبارہ ترتیب دینے کا حق ہے۔ ایک بار جب آپ اس عمل کی تصدیق کر دیتے ہیں، تو یہ ناقابل واپسی ہے اور تمام ٹیسٹ کے نتائج اور پیش رفت کا ڈیٹا ہمارے سسٹم سے مستقل طور پر مٹا دیا جائے گا۔",
       },
       {
         heading: "10. ادائیگی اور ان ایپ خریداری",
@@ -416,7 +415,7 @@
       },
       {
         heading: "៦. ការផ្សាយពាណិជ្ជកម្ម",
-        content: "សេវាកម្មនេះអាចរួមបញ្ចូលការផ្សាយពាណិជ្ជកម្ម ដែលអាចកំណត់គោលដៅផ្អែកលើការប្រើប្រាស់សេវាកម្មរបស់អ្នក ឬព័ត៌មានផ្សេងទៀត។ ជាការតបស្នងចំពោះការដែល Drive Japan Pro អនុញ្ញាតឱ្យអ្នកចូលប្រើប្រាស់ និងប្រើប្រាស់សេវាកម្ម អ្នកយល់ព្រមថា Drive Japan Pro និងអ្នកផ្តល់សេវាភាគីទីបីអាចដាក់ការផ្សាយពాណិជ្ជកម្មបែបនេះ។ យើងមិនធានា ឬគាំទ្រផលិតផល ឬសេវាកម្មណាមួយដែលបានផ្សាយពាណិជ្ជកម្មនោះទេ។"
+        content: "សេវាកម្មនេះអាចរួមបញ្ចូលការផ្សាយពាណិជ្ជកម្ម ដែលអាចកំណត់គោលដៅផ្អែកលើការប្រើប្រាស់សេវាកម្មរបស់អ្នក ឬព័ត៌មានផ្សេងទៀត។ ជាការតបស្នងចំពោះការដែល Drive Japan Pro អនុញ្ញាតឱ្យអ្នកចូលប្រើប្រាស់ និងប្រើប្រាស់សេវាកម្ម អ្នកយល់ព្រមថា Drive Japan Pro និងអ្នកផ្តល់សេវាភាគីទីបីអាចដាក់ការផ្សាយពាណិជ្ជកម្មបែបនេះ។ យើងមិនធានា ឬគាំទ្រផលិតផល ឬសេវាកម្មណាមួយដែលបានផ្សាយពាណិជ្ជកម្មនោះទេ។"
       },
       {
         heading: "៧. ច្បាប់គ្រប់គ្រង",
@@ -424,7 +423,7 @@
       },
       {
         heading: "៨. ការផ្លាស់ប្តូរលក្ខខណ្ឌ",
-        content: "យើងរក្សាសិទ្ធិ តាមការសម្រេចចិត្តរបស់យើងផ្ទាល់ ក្នុងការកែប្រែ ឬធ្វើបច្ចុប្បន្នភាពលក្ខខណ្ឌប្រើប្រាស់ទាំងនេះនៅពេលណាក៏បាន ដោយមិនចាំបាច់ផ្តល់ដំណឹងជាមុន។ លក្ខខណ្ឌដែលបានធ្វើបច្ចុប្បន្នភាពនឹងមានប្រសិទ្ធភាពភ្លាមៗបន្ទាប់ពីការបង្ហោះ។ ការបន្តប្រើប្រាស់សេវាកម្មរបស់អ្នកបន្ទាប់ពីការផ្លាស់ប្តូរបែបនេះ បញ្ជាក់ថាអ្នកយល់ព្រមតាមលក្ខខណ្ឌដែលបានកែសម្រួល។"
+        content: "យើងរក្សាសិទ្ធិ តាមការសម្រេចចិត្តរបស់យើងផ្ទាល់ ក្នុងការកែប្រែ ឬធ្វើបច្ចុប្បន្នភាពលក្ខខណ្ឌប្រើប្រាស់ទាំងនេះនៅពេលណាក៏បាន ដោយមិនចាំបាច់ផ្តល់ដំណឹងជាមុน។ លក្ខខណ្ឌដែលបានធ្វើបច្ចុប្បន្នភាពនឹងមានប្រសិទ្ធភាពភ្លាមៗបន្ទាប់ពីការបង្ហោះ។ ការបន្តប្រើប្រាស់សេវាកម្មរបស់អ្នកបន្ទាប់ពីការផ្លាស់ប្តូរបែបនេះ បញ្ជាក់ថាអ្នកយល់ព្រមតាមលក្ខខណ្ឌដែលបានកែសម្រួល។"
       },
       {
         heading: "៩. ការកំណត់វឌ្ឍនភាពឡើងវិញ",
@@ -439,7 +438,8 @@
         content: "ភាពត្រឹមត្រូវ ១០០% នៃសម្ភារៈ សំណួរអនុវត្ត និងចម្លើយរបស់យើងមិនត្រូវបានធានាឡើយ។ Drive Japan Pro និងអ្នកអភិវឌ្ឍន៍មិនទទួលខុសត្រូវចំពោះគ្រោះថ្នាក់ ការខូចខាត ឬផលវិបាកផ្លូវច្បាប់ណាមួយដែលបណ្តាលមកពីការអាន ឬការប្រើប្រាស់សម្ភារៈទាំងនេះទេ។ អ្នកប្រើប្រាស់ត្រូវបានណែនាំឱ្យផ្ទៀងផ្ទាត់ជាមួយច្បាប់ និងបទប្បញ្ញត្តិផ្លូវការ។"
       }
     ]
-  }\n};
+  }
+};
 
         function switchLanguage(language) {
             const contentDiv = document.getElementById('terms-content');
