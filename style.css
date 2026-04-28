@@ -197,6 +197,11 @@ footer {
     }
 
     .mobile-nav {
-        display: block;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .logo h1 {
+        white-space: nowrap;
     }
 }
