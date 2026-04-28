@@ -134,9 +134,51 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.social-links {
+    text-align: center;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.social-links img {
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
 footer {
     text-align: center;
     padding: 2rem 0;
     background-color: #ffffff;
     border-top: 1px solid #ddd;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .feature-list, .language-list {
+        grid-template-columns: 1fr;
+    }
+
+    .app-store-links img {
+        height: 40px;
+    }
+
+    nav ul {
+        display: none;
+    }
 }
