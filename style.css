@@ -144,8 +144,8 @@ h2 {
 }
 
 .social-links img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     transition: transform 0.3s ease;
 }
 
@@ -159,6 +159,20 @@ footer {
     background-color: #ffffff;
     border-top: 1px solid #ddd;
 }
+
+.mobile-nav {
+    display: none;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -178,7 +192,11 @@ footer {
         height: 40px;
     }
 
-    nav ul {
+    .desktop-nav {
         display: none;
+    }
+
+    .mobile-nav {
+        display: block;
     }
 }
