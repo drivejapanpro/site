@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Drive Japan Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Drive Japan Pro Logo">
+                <h1><a href="index.html">Drive Japan Pro</a></h1>
+            </div>
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#languages">Languages</a></li>
+                <li><a href="index.html#study-materials">Study Materials</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="language-switcher">
+                <button onclick="switchLanguage('en')">English</button>
+                <button onclick="switchLanguage('ja')">日本語</button>
+                <button onclick="switchLanguage('ne')">नेपाली</button>
+                <button onclick="switchLanguage('hi')">हिन्दी</button>
+                <button onclick="switchLanguage('ur')">اردو</button>
+                <button onclick="switchLanguage('si')">සිංහල</button>
+                <button onclick="switchLanguage('vi')">Tiếng Việt</button>
+                <button onclick="switchLanguage('km')">ខ្មែរ</button>
+            </div>
+            <div id="privacy-content">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Drive Japan Pro. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+          en: {
+            title: "Privacy Policy",
+            lastUpdated: "Last updated: April 14, 2026",
+            sections: [
+              {
+                heading: "1. Information We Collect",
+                content: "We do not collect or store personal information such as your name, email address, or contact details. We also do not store your learning progress, test results, or performance data on our servers. However, certain non-personal data may be automatically collected by third-party services integrated into the app.",
+              },
+              {
+                heading: "2. How the App Functions",
+                content: "All practice tests and learning features operate within the app. Your activity and progress are not stored or tracked by us. Any temporary data used during app operation is not retained by our systems.",
+              },
+              {
+                heading: "3. Third-Party Services",
+                content: "We use third-party services such as Google Analytics and Google AdMob. These services may automatically collect certain information, including device information, usage data, and advertising identifiers, to help us understand app performance and provide advertisements. This data is handled according to their respective privacy policies.",
+              },
+              {
+                heading: "4. How Third-Party Data Is Used",
+                content: "Google Analytics helps us analyze app usage and improve functionality. Google AdMob is used to display advertisements, which may be personalized or non-personalized based on your device settings. We do not access or control the data collected by these services.",
+              },
+              {
+                heading: "5. Data Storage and Security",
+                content: "We do not store user data on our own servers. Data collected by third-party services is managed and secured by those providers. While we choose reputable partners, we cannot guarantee absolute security of data handled by third parties.",
+              },
+              {
+                heading: "6. Sharing of Information",
+                content: "We do not sell, trade, or share any data collected by us. Any data collected by third-party services is processed and used in accordance with their own policies.",
+              },
+              {
+                heading: "7. Your Choices",
+                content: "You can control certain data collection through your device settings, such as limiting ad personalization or resetting your advertising identifier. You may also opt out of certain analytics tracking where supported by your device or platform.",
+              },
+              {
+                heading: "8. Changes to This Policy",
+                content: "We may update this Privacy Policy from time to time. Any changes will be reflected within the app. Continued use of the app after updates indicates your acceptance of the revised policy.",
+              },
+              {
+                heading: "9. Disclaimer",
+                content: "This app is intended for educational and practice purposes only. We do not guarantee that use of this app will result in passing any official driving test. Users should refer to official sources for accurate and up-to-date driving regulations and requirements.",
+              },
+            ],
+          },
+          ja: {
+            title: "プライバシーポリシー",
+            lastUpdated: "最終更新日: 2026年4月14日",
+            sections: [
+              {
+                heading: "1. 収集する情報",
+                content: "氏名、メールアドレス、連絡先などの個人情報を収集または保存することはありません。また、学習の進捗状況、テスト結果、パフォーマンスデータをサーバーに保存することもありません。ただし、アプリに統合されたサードパーティサービスによって、特定の非個人データが自動的に収集される場合があります。",
+              },
+              {
+                heading: "2. アプリの機能について",
+                content: "すべての練習テストと学習機能はアプリ内で動作します。ユーザーのアクティビティや進捗状況が当社によって保存または追跡されることはありません。アプリの動作中に使用される一時的なデータは、当社のシステムに保持されません。",
+              },
+              {
+                heading: "3. サードパーティサービス",
+                content: "Google AnalyticsやGoogle AdMobなどのサードパーティサービスを使用しています。これらのサービスは、アプリのパフォーマンスを把握し広告を提供するために、デバイス情報、使用状況データ、広告識別子などの特定の情報を自動的に収集する場合があります。これらのデータは、それぞれのプライバシーポリシーに従って取り扱われます。",
+              },
+              {
+                heading: "4. サードパーティデータの利用目的",
+                content: "Google Analyticsは、アプリの使用状況を分析し機能を改善するために役立てられます。Google AdMobは広告を表示するために使用され、デバイスの設定に基づいてパーソナライズされる場合とされない場合があります。当社は、これらのサービスが収集するデータにアクセスしたり制御したりすることはありません。",
+              },
+              {
+                heading: "5. データの保存とセキュリティ",
+                content: "ユーザーデータを自社サーバーに保存することはありません。サードパーティサービスによって収集されたデータは、それらのプロバイダーによって管理および保護されます。信頼できるパートナーを選択していますが、サードパーティが取り扱うデータの絶対的なセキュリティを保証することはできません。",
+              },
+              {
+                heading: "6. 情報の共有",
+                content: "収集したデータを販売、取引、または共有することはありません。サードパーティサービスによって収集されたデータは、それぞれのポリシーに従って処理および使用されます。",
+              },
+              {
+                heading: "7. ユーザーの選択肢",
+                content: "広告のパーソナライズを制限したり、広告識別子をリセットしたりするなど、デバイスの設定を通じて特定のデータ収集を制御できます。また、デバイスやプラットフォームがサポートしている場合は、特定の分析トラッキングをオプトアウトすることも可能です。",
+              },
+              {
+                heading: "8. ポリシーの変更",
+                content: "本プライバシーポリシーは随時更新されることがあります。変更はアプリ内に反映されます。更新後もアプリの利用を継続することで、改訂されたポリシーに同意したものとみなされます。",
+              },
+              {
+                heading: "9. 免責事項",
+                content: "本アプリは教育および練習のみを目的としています。本アプリの使用によって公式の運転免許試験への合格を保証するものではありません。正確で最新の運転規則や要件については、公式の情報源を参照してください。",
+              },
+            ],
+          },
+          ne: {
+            title: "गोपनीयता नीति",
+            lastUpdated: "अन्तिम अपडेट: अप्रिल १४, २०२६",
+            sections: [
+              {
+                heading: "१. हामीले संकलन गर्ने जानकारी",
+                content: "हामी तपाईंको नाम, इमेल ठेगाना, वा सम्पर्क विवरणहरू जस्ता व्यक्तिगत जानकारी संकलन वा भण्डारण गर्दैनौं। हामी हाम्रो सर्भरमा तपाईंको सिकाइको प्रगति, परीक्षण नतिजा, वा कार्यसम्पादन डाटा पनि भण्डारण गर्दैनौं। यद्यपि, एपमा एकीकृत तेस्रो-पक्ष सेवाहरूद्वारा केही गैर-व्यक्तिगत डाटा स्वचालित रूपमा संकलन हुन सक्छ।",
+              },
+              {
+                heading: "२. एपले कसरी काम गर्छ",
+                content: "सबै अभ्यास परीक्षण र सिकाइ सुविधाहरू एप भित्रै सञ्चालन हुन्छन्। तपाईंको गतिविधि र प्रगति हामीद्वारा भण्डारण वा ट्र्याक गरिँदैन। एप सञ्चालनको क्रममा प्रयोग हुने कुनै पनि अस्थायी डाटा हाम्रो प्रणालीमा राखिँदैन।",
+              },
+              {
+                heading: "३. तेस्रो-पक्ष सेवाहरू",
+                content: "हामी Google Analytics र Google AdMob जस्ता तेस्रो-पक्ष सेवाहरू प्रयोग गर्छौं। यी सेवाहरूले एपको कार्यसम्पादन बुझ्न र विज्ञापनहरू प्रदान गर्न उपकरणको जानकारी, प्रयोग डाटा, र विज्ञापन पहिचानकर्ताहरू सहित केही जानकारी स्वचालित रूपमा संकलन गर्न सक्छन्। यो डाटा उनीहरूको सम्बन्धित गोपनीयता नीतिहरू अनुसार ह्यान्डल गरिन्छ।",
+              },
+              {
+                heading: "४. तेस्रो-पक्ष डाटा कसरी प्रयोग गरिन्छ",
+                content: "Google Analytics ले हामीलाई एपको प्रयोग विश्लेषण गर्न र कार्यक्षमता सुधार गर्न मद्दत गर्दछ। Google AdMob विज्ञापनहरू प्रदर्शन गर्न प्रयोग गरिन्छ, जुन तपाईंको उपकरण सेटिङहरूमा आधारित व्यक्तिगत वा गैर-व्यक्तिगत हुन सक्छ। हामी यी सेवाहरूद्वारा संकलन गरिएको डाटामा पहुँच वा नियन्त्रण गर्दैनौं।",
+              },
+              {
+                heading: "५. डाटा भण्डारण र सुरक्षा",
+                content: "हामी हाम्रो आफ्नै सर्भरमा प्रयोगकर्ताको डाटा भण्डारण गर्दैनौं। तेस्रो-पक्ष सेवाहरूद्वारा संकलन गरिएको डाटा ती प्रदायकहरूद्वारा व्यवस्थित र सुरक्षित गरिन्छ। हामीले प्रतिष्ठित साझेदारहरू छनौट गरे तापनि, हामी तेस्रो पक्षहरूद्वारा ह्यान्डल गरिएको डाटाको पूर्ण सुरक्षाको ग्यारेन्टी दिन सक्दैनौं।",
+              },
+              {
+                heading: "६. जानकारीको साझेदारी",
+                content: "हामीले संकलन गरेको कुनै पनि डाटा बिक्री, व्यापार वा साझेदारी गर्दैनौं। तेस्रो-पक्ष सेवाहरूद्वारा संकलन गरिएको कुनै पनि डाटा उनीहरूको आफ्नै नीतिहरू अनुसार प्रशोधन र प्रयोग गरिन्छ।",
+              },
+              {
+                heading: "७. तपाईंका विकल्पहरू",
+                content: "तपाईंले आफ्नो उपकरण सेटिङहरू मार्फत केही डाटा संकलन नियन्त्रण गर्न सक्नुहुन्छ, जस्तै विज्ञापन निजीकरण सीमित गर्ने वा तपाईंको विज्ञापन पहिचानकर्ता रिसेट गर्ने। तपाईंको उपकरण वा प्लेटफर्मले समर्थन गरेको ठाउँमा तपाईं केही विश्लेषण ट्र्याकिङबाट बाहिर निस्कन पनि सक्नुहुन्छ।",
+              },
+              {
+                heading: "८. यस नीतिमा परिवर्तनहरू",
+                content: "हामी समय-समयमा यो गोपनीयता नीति अपडेट गर्न सक्छौं। कुनै पनि परिवर्तनहरू एप भित्र प्रतिबिम्बित हुनेछन्। अपडेटहरू पछि एपको निरन्तर प्रयोगले संशोधित नीतिमा तपाईंको स्वीकृति जनाउँछ।",
+              },
+              {
+                heading: "९. अस्वीकरण",
+                content: "यो एप शैक्षिक र अभ्यास उद्देश्यका लागि मात्र हो। हामी यो एपको प्रयोगले कुनै पनि आधिकारिक ड्राइभिङ परीक्षण पास हुने ग्यारेन्टी दिँदैनौं। प्रयोगकर्ताहरूले सही र अद्यावधिक ड्राइभिङ नियम र आवश्यकताहरूको लागि आधिकारिक स्रोतहरू हेर्नुपर्छ।",
+              },
+            ],
+          },
+          hi: {
+            title: "गोपनीयता नीति",
+            lastUpdated: "अंतिम अपडेट: 14 अप्रैल, 2026",
+            sections: [
+              {
+                heading: "1. जानकारी जो हम एकत्र करते हैं",
+                content: "हम आपका नाम, ईमेल पता या संपर्क विवरण जैसी व्यक्तिगत जानकारी एकत्र या संग्रहीत नहीं करते हैं। हम अपने सर्भर पर आपकी सीखने की प्रगति, परीक्षण परिणाम या प्रदर्शन डेटा भी संग्रहीत नहीं करते हैं। हालांकि, ऐप में एकीकृत तृतीय-पक्ष सेवाओं द्वारा कुछ गैर-व्यक्तिगत डेटा स्वचालित रूप से एकत्र किया जा सकता है।",
+              },
+              {
+                heading: "2. ऐप कैसे कार्य करता है",
+                content: "सभी अभ्यास परीक्षण और सीखने की विशेषताएं ऐप के भीतर संचालित होती हैं। आपकी गतिविधि और प्रगति हमारे द्वारा संग्रहीत या ट्रैक नहीं की जाती है। ऐप संचालन के दौरान उपयोग किया जाने वाला कोई भी अस्थायी डेटा हमारे सिस्टम द्वारा सुरक्षित नहीं रखा जाता है।",
+              },
+              {
+                heading: "3. तृतीय-पक्ष सेवाएँ",
+                content: "हम Google Analytics और Google AdMob जैसी तृतीय-पक्ष सेवाओं का उपयोग करते हैं। ये सेवाएँ ऐप के प्रदर्शन को समझने और विज्ञापन प्रदान करने के लिए डिवाइस की जानकारी, उपयोग डेटा और विज्ञापन पहचानकर्ता सहित कुछ जानकारी स्वचालित रूप से एकत्र कर सकती हैं। यह डेटा उनकी संबंधित गोपनीयता नीतियों के अनुसार संभाला जाता है।",
+              },
+              {
+                heading: "4. तृतीय-पक्ष डेटा का उपयोग कैसे किया जाता है",
+                content: "Google Analytics हमें ऐप के उपयोग का विश्लेषण करने और कार्यक्षमता में सुधार करने में मदद करता है। Google AdMob का उपयोग विज्ञापन दिखाने के लिए किया जाता है, जो आपके डिवाइस सेटिंग्स के आधार पर व्यक्तिगत या गैर-व्यक्तिगत हो सकते हैं। हम इन सेवाओं द्वारा एकत्र किए गए डेटा तक पहुँच या नियंत्रण नहीं रखते हैं।",
+              },
+              {
+                heading: "5. डेटा भंडारण और सुरक्षा",
+                content: "हम अपने सर्वर पर उपयोगकर्ता डेटा संग्रहीत नहीं करते हैं। तृतीय-पक्ष सेवाओं द्वारा एकत्र किया गया डेटा उन प्रदाताओं द्वारा प्रबंधित और सुरक्षित किया जाता है। हालांकि हम प्रतिष्ठित भागीदारों का चयन करते हैं, हम तृतीय पक्षों द्वारा संभाले गए डेटा की पूर्ण सुरक्षा की गारंटी नहीं दे सकते।",
+              },
+              {
+                heading: "6. जानकारी साझा करना",
+                content: "हम हमारे द्वारा एकत्र किए गए किसी भी डेटा को बेचते, व्यापार या साझा नहीं करते हैं। तृतीय-पक्ष सेवाओं द्वारा एकत्र किया गया कोई भी डेटा उनकी अपनी नीतियों के अनुसार संसाधित और उपयोग किया जाता है।",
+              },
+              {
+                heading: "7. आपके विकल्प",
+                content: "आप अपनी डिवाइस सेटिंग्स के माध्यम से कुछ डेटा संग्रह को नियंत्रित कर सकते हैं, जैसे विज्ञापन वैयक्तिकरण को सीमित करना या अपने विज्ञापन पहचानकर्ता को रीसेट करना। जहां आपके डिवाइस या प्लेटफॉर्म द्वारा समर्थित हो, आप कुछ एनालिटिक्स ट्रैकिंग से ऑप्ट-आउट भी कर सकते हैं।",
+              },
+              {
+                heading: "8. इस नीति में परिवर्तन",
+                content: "हम समय-समय पर इस गोपनीयता नीति को अपडेट कर सकते हैं। कोई भी परिवर्तन ऐप के भीतर दिखाई देगा। अपडेट के बाद ऐप का निरंतर उपयोग संशोधित नीति की आपकी स्वीकृति को दर्शाता है।",
+              },
+              {
+                heading: "9. अस्वीकरण",
+                content: "यह ऐप केवल शैक्षिक और अभ्यास उद्देश्यों के लिए है। हम यह गारंटी नहीं देते हैं कि इस ऐप के उपयोग से किसी भी आधिकारिक ड्राइविंग टेस्ट में सफलता मिलेगी। उपयोगकर्ताओं को सटीक और अद्यतित ड्राइविंग नियमों और आवश्यकताओं के लिए आधिकारिक स्रोतों का संदर्भ लेना चाहिए।",
+              },
+            ],
+          },
+          ur: {
+            title: "رازداری کی پالیسی",
+            lastUpdated: "آخری اپ ڈیٹ: 14 اپریل 2026",
+            sections: [
+              {
+                heading: "1. معلومات جو ہم جمع کرتے ہیں",
+                content: "ہم آپ کا نام، ای میل پتہ، یا رابطے کی تفصیلات جیسی ذاتی معلومات جمع یا محفوظ نہیں کرتے ہیں۔ ہم اپنے سرورز پر آپ کی سیکھنے کی پیشرفت، ٹیسٹ کے نتائج، یا کارکردگی کا ڈیٹا بھی محفوظ نہیں کرتے ہیں۔ تاہم، ایپ میں شامل تھرڈ پارٹی سروسز کے ذریعے کچھ غیر ذاتی ڈیٹا خود بخود جمع کیا جا سکتا ہے۔",
+              },
+              {
+                heading: "2. ایپ کیسے کام کرتی ہے",
+                content: "تمام پریکٹس ٹیسٹ اور سیکھنے کی خصوصیات ایپ کے اندر کام کرتی ہیں۔ آپ کی سرگرمی اور پیشرفت کو ہمارے ذریعے محفوظ یا ٹریک نہیں کیا جاتا ہے۔ ایپ کے آپریشن کے دوران استعمال ہونے والا کوئی بھی عارضی ڈیٹا ہمارے سسٹمز کے پاس نہیں رہتا۔",
+              },
+              {
+                heading: "3. تھرڈ پارٹی سروسز",
+                content: "ہم Google Analytics اور Google AdMob جیسی تھرڈ پارٹی سروسز استعمال کرتے ہیں۔ ਇਹ سروسز ایپ کی کارکردگی کو سمجھنے اور اشتہارات فراہم کرنے کے لیے ڈیوائس کی معلومات، استعمال کا ڈیٹا، اور اشتہاری شناخت کنندگان سمیت کچھ معلومات خود بخود جمع کر سکتی ہیں۔ اس ڈیٹا کو ان کی متعلقہ رازداری کی پالیسیوں کے مطابق سنبھالا جاتا ہے۔",
+              },
+              {
+                heading: "4. تھرڈ پارٹی ڈیٹا کا استعمال کیسے کیا جاتا ہے",
+                content: "Google Analytics ہمیں ایپ کے استعمال کا تجزیہ کرنے اور فنکشنلٹی کو بہتر بنانے میں مدد کرتا ہے۔ Google AdMob اشتہارات دکھانے کے لیے استعمال کیا جاتا ہے، جو آپ کے ڈیوائس کی ترتیبات کی بنیاد پر ذاتی نوعیت کے یا غیر ذاتی ہو سکتے ہیں۔ ہم ان سروسز کے ذریعے جمع کیے گئے ڈیٹا تک رسائی یا اسے کنٹرول نہیں کرتے ہیں۔",
+              },
+              {
+                heading: "5. ڈیٹا اسٹوریج اور سیکیورٹی",
+                content: "ہم اپنے سرورز پر صارف کا ڈیٹا محفوظ نہیں کرتے ہیں۔ تھرڈ پارٹی سروسز کے ذریعے جمع کردہ ڈیٹا کا انتظام اور سیکیورٹی ان فراہم کنندگان کے ذریعے کی جاتی ہے۔ اگرچہ ہم معتبر شراکت داروں کا انتخاب کرتے ہیں، لیکن ہم تھرڈ پارٹیز کے ذریعے سنبھالے گئے ڈیٹا کی مکمل سیکیورٹی کی ضمانت نہیں دے سکتے۔",
+              },
+              {
+                heading: "6. معلومات کا اشتراک",
+                content: "ہم اپنے ذریعے جمع کیے گئے کسی بھی ڈیٹا کو فروخت، تجارت یا شیئر نہیں کرتے ہیں۔ تھرڈ پارٹی سروسز کے ذریعے جمع کردہ کسی بھی ڈیٹا پر کارروائی اور استعمال ان کی اپنی پالیسیوں کے مطابق کیا جاتا ہے۔",
+              },
+              {
+                heading: "7. آپ کے اختیارات",
+                content: "آپ اپنے ڈیوائس کی ترتیبات کے ذریعے ڈیٹا جمع کرنے کے کچھ عمل کو کنٹرول کر سکتے ہیں، جیسے اشتہارات کی ذاتی نوعیت کو محدود کرنا یا اپنے اشتہاری شناخت کنندہ کو ری سیٹ کرنا۔ جہاں آپ کا ڈیوائس یا پلیٹ فارم اس کی حمایت کرتا ہو، آپ مخصوص اینالیٹکس ٹریکنگ سے آپٹ آؤٹ بھی کر سکتے ہیں۔",
+              },
+              {
+                heading: "8. اس پالیسی میں تبدیلیاں",
+                content: "ہم وقتاً فوقتاً اس رازداری کی پالیسی کو اپ ڈیٹ کر سکتے ہیں۔ کوئی بھی تبدیلی ایپ کے اندر نظر آئے گی۔ اپ ڈیٹس کے بعد ایپ کا مسلسل استعمال ترمیم شدہ پالیسی کی آپ کی قبولیت کی نشاندہی کرتا ہے۔",
+              },
+              {
+                heading: "9. دستبرداری",
+                content: "یہ ایپ صرف تعلیمی اور مشق کے مقاصد کے لیے ہے۔ ہم اس بات کی ضمانت نہیں دیتے کہ اس ایپ کے استعمال کے نتیجے میں کوئی بھی آفیشل ڈرائیونگ ٹیسٹ پاس ہو جائے گا۔ صارفین کو درست اور تازہ ترین ڈرائیونگ قوانین اور ضروریات کے لیے آفیشل ذرائع سے رجوع کرنا چاہیے۔",
+              },
+            ],
+          },
+          si: {
+            title: "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
+            lastUpdated: "අවසන් වරට යාවත්කාලීන කළේ: 2026 අප්‍රේල් 14",
+            sections: [
+              {
+                heading: "1. අප රැස් කරන තොරතුරු",
+                content: "අපි ඔබේ නම, විද්‍යුත් තැපැල් ලිපිනය හෝ සම්බන්ධතා තොරතුරු වැනි පුද්ගලික තොරතුරු රැස් කිරීම හෝ ගබඩා කිරීම සිදු නොකරන්නෙමු. එමෙන්ම ඔබේ ඉගෙනීමේ ප්‍රගතිය, පරීක්ෂණ ප්‍රතිඵල හෝ කාර්ය සාධන දත්ත අපගේ සේවාදායකයන්හි ගබඩා නොකරමු. කෙසේ වෙතත්, යෙදුමට ඒකාබද්ධ කර ඇති තෙවන පාර්ශවීය සේවාවන් මගින් පුද්ගලික නොවන ඇතැම් දත්ත ස්වයංක්‍රීයව රැස් කරනු ලැබිය හැකිය.",
+              },
+              {
+                heading: "2. යෙදුම ක්‍රියා කරන ආකාරය",
+                content: "සියලුම ප්‍රායෝගික පරීක්ෂණ සහ ඉගෙනුම් විශේෂාංග යෙදුම තුළම ක්‍රියාත්මක වේ. ඔබේ ක්‍රියාකාරකම් සහ ප්‍රගතිය අප විසින් ගබඩා කිරීම හෝ නිරීක්ෂණය කිරීම සිදු නොකරයි. යෙදුම ක්‍රියාත්මක වන විට භාවිතා කරන කිසිදු තාවකාලික දත්තයක් අපගේ පද්ධති තුළ රඳවා නොගනී.",
+              },
+              {
+                heading: "3. තෙවන පාර්ශවීය සੇਵਾ",
+                content: "අපි Google Analytics සහ Google AdMob වැනි තෙවන පාර්ශවීය සේවාවන් භාවිතා කරමු. යෙදුමේ කාර්ය සාධනය අවබෝධ කර ගැනීමට සහ වෙළඳ දැන්වීම් සැපයීම සඳහා මෙම සේවාවන් මගින් උපාංග තොරතුරු, භාවිත දත්ත සහ වෙළඳ දැන්වීම් හඳුනාගැනීම් ඇතුළු ඇතැම් තොරතුරු ස්වයංක්‍රීයව රැස් කළ හැකිය. මෙම දත්ත ඔවුන්ගේ අදාළ පෞද්ගලිකත්ව ප්‍රතිපත්තිවලට අනුව හසුරුවනු ලැබේ.",
+              },
+              {
+                heading: "4. තෙවන පාර්ශවීය දත්ත භාවිතා කරන ආකාරය",
+                content: "Google Analytics අපට යෙදුම් භාවිතය විශ්ලේෂණය කිරීමට සහ ක්‍රියාකාරීත්වය වැඩි දියුණු කිරීමට උපකාරී වේ. Google AdMob වෙළඳ දැන්වීම් ප්‍රදර්ශනය කිරීමට භාවිතා කරන අතර, ඒවා ඔබේ උපාංග සැකසීම් මත පදනම්ව පුද්ගලීකරණය කළ හෝ නොකළ හැකිය. මෙම සේවාවන් මගින් රැස් කරන දත්ත වලට අපට ප්‍රවේශයක් හෝ පාලනයක් නොමැත.",
+              },
+              {
+                heading: "5. දත්ත ගබඩා කිරීම සහ ආරක්ෂාව",
+                content: "අපි අපගේම සේවාදායකයන්හි පරිශීලක දත්ත ගබඩා නොකරමු. තෙවන පාර්ශවීය සේවාවන් මගින් රැස් කරන දත්ත එම සැපයුම්කරුවන් විසින් කළමනාකරණය කර ආරක්ෂා කරනු ලැබේ. අප පිළිගත් හවුල්කරුවන් තෝරා ගත්තද, තෙවන පාර්ශවයන් විසින් හසුරුවන දත්තවල පරම ආරක්ෂාව අපට සහතික කළ නොහැක.",
+              },
+              {
+                heading: "6. තොරතුරු බෙදා ගැනීම",
+                content: "අප විසින් රැස් කරන ලද කිසිදු දත්තයක් අප විකුණන්නේ, වෙළඳාම් කරන්නේ හෝ බෙදා ගන්නේ නැත. තෙවන පාර්ශවීය සේවාවන් මගින් රැස් කරන ඕනෑම දත්තයක් ඔවුන්ගේම ප්‍රතිපත්තිවලට අනුකූලව සකසනු ලබන අතර භාවිතා කරනු ලැබේ.",
+              },
+              {
+                heading: "7. ඔබේ තේරීම්",
+                content: "වෙළඳ දැන්වීම් පුද්ගලීකරණය සීමා කිරීම හෝ ඔබේ වෙළඳ දැන්වීම් හඳුනාගැනීම ප්‍රතිසංස්කරණය කිරීම වැනි ඔබේ උපාංග සැකසීම් හරහා ඇතැම් දත්ත රැස් කිරීම පාලනය කළ හැකිය. ඔබේ උපාංගය හෝ වේදිකාව මගින් සහය දක්වන අවස්ථාවලදී ඇතැම් විශ්ලේෂණ ලුහුබැඳීම්වලින් ඉවත් වීමටද ඔබට හැකිය.",
+              },
+              {
+                heading: "8. මෙම ප්‍රතිපත්තියේ වෙනස්කම්",
+                content: "අපි වරින් වර මෙම පෞද්ගලිකත්ව ප්‍රතිපත්තිය යාවත්කාලීන කළ හැකිය. ඕනෑම වෙනසක් යෙදුම තුළ පිළිබිඹු වේ. යාවත්කාලීන කිරීම් වලින් පසුව යෙදුම අඛණ්ඩව භාවිතා කිරීමෙන් ඔබ සංශෝධිත ප්‍රතිපත්තිය පිළිගන්නා බව පෙන්නුම් කරයි.",
+              },
+              {
+                heading: "9. වගකීම් විරහිත ප්‍රකාශය",
+                content: "මෙම යෙදුම අධ්‍යාපනික සහ පුහුණු අරමුණු සඳහා පමණක් අදහස් කෙරේ. මෙම යෙදුම භාවිතා කිරීමෙන් ඕනෑම නිල රියදුරු පරීක්ෂණයකින් සමත් වන බවට අප සහතික නොවන්නෙමු. නිවැරදි සහ යාවත්කාලීන රියදුරු රෙගුලාසි සහ අවශ්‍යතා සඳහා පරිශීලකයින් නිල මූලාශ්‍ර වෙත යොමු විය යුතුය.",
+              },
+            ],
+          },
+          vi: {
+            title: "Chính sách bảo mật",
+            lastUpdated: "Cập nhật lần cuối: Ngày 14 tháng 4 năm 2026",
+            sections: [
+              {
+                heading: "1. Thông tin chúng tôi thu thập",
+                content: "Chúng tôi không thu thập hoặc lưu trữ thông tin cá nhân như tên, địa chỉ email hoặc chi tiết liên hệ của bạn. Chúng tôi cũng không lưu trữ tiến trình học tập, kết quả kiểm tra hoặc dữ liệu hiệu suất của bạn trên máy chủ của mình. Tuy nhiên, một số dữ liệu phi cá nhân có thể được tự động thu thập bởi các dịch vụ của bên thứ ba được tích hợp vào ứng dụng.",
+              },
+              {
+                heading: "2. Cách ứng dụng hoạt động",
+                content: "Tất cả các bài kiểm tra thực hành và tính năng học tập đều hoạt động trong ứng dụng. Hoạt động và tiến trình của bạn không được chúng tôi lưu trữ hoặc theo dõi. Bất kỳ dữ liệu tạm thời nào được sử dụng trong quá trình vận hành ứng dụng đều không được hệ thống của chúng tôi lưu giữ.",
+              },
+              {
+                heading: "3. Dịch vụ của bên thứ ba",
+                content: "Chúng tôi sử dụng các dịch vụ của bên thứ ba như Google Analytics và Google AdMob. Các dịch vụ này có thể tự động thu thập một số thông tin nhất định, bao gồm thông tin thiết bị, dữ liệu sử dụng và số nhận dạng quảng cáo, để giúp chúng tôi hiểu hiệu suất ứng dụng và cung cấp quảng cáo. Dữ liệu này được xử lý theo chính sách bảo mật tương ứng của họ.",
+              },
+              {
+                heading: "4. Cách dữ liệu của bên thứ ba được sử dụng",
+                content: "Google Analytics giúp chúng tôi phân tích việc sử dụng ứng dụng và cải thiện chức năng. Google AdMob được sử dụng để hiển thị quảng cáo, có thể được cá nhân hóa hoặc không cá nhân hóa dựa trên cài đặt thiết bị của bạn. Chúng tôi không truy cập hoặc kiểm soát dữ liệu được thu thập bởi các dịch vụ này.",
+              },
+              {
+                heading: "5. Lưu trữ và bảo mật dữ liệu",
+                content: "Chúng tôi không lưu trữ dữ liệu người dùng trên máy chủ của riêng mình. Dữ liệu được thu thập bởi các dịch vụ của bên thứ ba được quản lý và bảo mật bởi các nhà cung cấp đó. Mặc dù chúng tôi chọn các đối tác uy tín, chúng tôi không thể đảm bảo an ninh tuyệt đối cho dữ liệu được xử lý bởi bên thứ ba.",
+              },
+              {
+                heading: "6. Chia sẻ thông tin",
+                content: "Chúng tôi không bán, trao đổi hoặc chia sẻ bất kỳ dữ liệu nào do chúng tôi thu thập. Bất kỳ dữ liệu nào được thu thập bởi các dịch vụ của bên thứ ba đều được xử lý và sử dụng theo chính sách riêng của họ.",
+              },
+              {
+                heading: "7. Lựa chọn của bạn",
+                content: "Bạn có thể kiểm soát việc thu thập dữ liệu nhất định thông qua cài đặt thiết bị của mình, chẳng hạn như giới hạn cá nhân hóa quảng cáo hoặc đặt lại mã nhận dạng quảng cáo của bạn. Bạn cũng có thể từ chối một số theo dõi phân tích nhất định nếu thiết bị hoặc nền tảng của bạn hỗ trợ.",
+              },
+              {
+                heading: "8. Thay đổi đối với chính sách này",
+                content: "Chúng tôi có thể cập nhật Chính sách bảo mật này theo thời gian. Mọi thay đổi sẽ được phản ánh trong ứng dụng. Việc tiếp tục sử dụng ứng dụng sau khi cập nhật cho thấy bạn chấp nhận chính sách đã sửa đổi.",
+              },
+              {
+                heading: "9. Tuyên bố miễn trừ trách nhiệm",
+                content: "Ứng dụng này chỉ dành cho mục đích giáo dục và thực hành. Chúng tôi không đảm bảo rằng việc sử dụng ứng dụng này sẽ giúp bạn vượt qua bất kỳ kỳ thi bằng lái xe chính thức nào. Người dùng nên tham khảo các nguồn chính thức để biết các quy định và yêu cầu lái xe chính xác và cập nhật nhất.",
+              }
+            ]
+          },
+          km: {
+            title: "គោលការណ៍ឯកជនភាព",
+            lastUpdated: "ធ្វើបច្ចុប្បន្នភាពចុងក្រោយ៖ ថ្ងៃទី១៤ ខែមេសា ឆ្នាំ២០២៦",
+            sections: [
+              {
+                heading: "១. ព័ត៌មានដែលយើងប្រមូល",
+                content: "យើងមិនប្រមូល ឬរក្សាទុកព័ត៌មានផ្ទាល់ខ្លួន ដូចជាឈ្មោះ អាសយដ្ឋានអ៊ីមែល ឬព័ត៌មានទំនាក់ទំនងរបស់អ្នកនោះទេ។ យើងក៏មិនរក្សាទុកវឌ្ឍនភាពនៃការសិក្សា លទ្ធផលតេស្ត ឬទិន្នន័យនៃការអនុវត្តរបស់អ្នកនៅលើម៉ាស៊ីនបម្រើ (Server) របស់យើងដែរ។ ទោះជាយ៉ាងណាក៏ដោយ ទិន្នន័យមិនមែនផ្ទាល់ខ្លួនមួយចំនួន អាចនឹងត្រូវបានប្រមូលដោយស្វ័យប្រវត្តិតាមរយៈសេវាកម្មភាគីទីបីដែលបានរួមបញ្ចូលក្នុងកម្មវិធី។"
+              },
+              {
+                heading: "២. របៀបដំណើរការរបស់កម្មវិធី",
+                content: "រាល់ការធ្វើតេស្តអនុវត្ត និងមុខងារសិក្សាទាំងអស់ដំណើរការនៅក្នុងកម្មវិធី Kurun。 សកម្មភាព និងវឌ្ឍនភាពរបស់អ្នកមិនត្រូវបានរក្សាទុក ឬតាមដានដោយយើងខ្ញុំឡើយ។ ទិន្នន័យបណ្តោះអាសន្នណាមួយដែលប្រើប្រាស់ក្នុងអំឡុងពេលប្រតិបត្តិការកម្មវិធី នឹងមិនត្រូវបានរក្សាទុកក្នុងប្រព័ន្ធរបស់យើងទេ។"
+              },
+              {
+                heading: "៣. សេវាកម្មភាគីទីបី",
+                content: "យើងប្រើប្រាស់សេវាកម្មភាគីទីបី ដូចជា Google Analytics និង Google AdMob ជាដើម។ សេវាកម្មទាំងនេះអាចប្រមូលព័ត៌មានជាក់លាក់ដោយស្វ័យប្រវត្តិ រួមមានព័ត៌មានឧបករណ៍ ទិន្នន័យប្រើប្រាស់ និងលេខសម្គាល់ការផ្សាយពាណិជ្ជកម្ម ដើម្បីជួយយើងឱ្យយល់ពីប្រសិទ្ធភាពនៃកម្មវិធី និងផ្តល់ការផ្សាយពាណិជ្ជកម្ម។ ទិន្នន័យនេះត្រូវបានចាត់ចែងស្របតាមគោលការណ៍ឯកជនភាពរៀងៗខ្លួនរបស់ពួកគេ។"
+              },
+              {
+                heading: "៤. របៀបដែលទិន្នន័យភាគីទីបីត្រូវបានប្រើប្រាស់",
+                content: "Google Analytics ជួយយើងវិភាគការប្រើប្រាស់កម្មវិធី និងកែលម្អមុខងារ។ Google AdMob ត្រូវបានប្រើដើម្បីបង្ហាញការផ្សាយពាណិជ្ជកម្ម ដែលអាចមានលក្ខណៈផ្ទាល់ខ្លួន ឬមិនផ្ទាល់ខ្លួន អាស្រ័យលើការកំណត់ឧបករណ៍របស់អ្នក។ យើងមិនមានសិទ្ធិចូលប្រើ ឬគ្រប់គ្រងទិន្នន័យដែលប្រមូលបានដោយសេវាកម្មទាំងនេះទេ។"
+              },
+              {
+                heading: "៥. ការរក្សាទុកទិន្នន័យ និងសុវត្ថិភាព",
+                content: "យើងមិនរក្សាទុកទិន្នន័យអ្នកប្រើប្រាស់នៅលើម៉ាស៊ីនបម្រើផ្ទាល់ខ្លួនរបស់យើងទេ។ ទិន្នន័យដែលប្រមូលបានដោយសេវាកម្មភាគីទីបី ត្រូវបានគ្រប់គ្រង និងការពារដោយអ្នកផ្តល់សេវាទាំងនោះ។ ខណៈពេលដែលយើងជ្រើសរើសដៃគូដែលមានកេរ្តិ៍ឈ្មោះ យើងមិនអាចធានាសុវត្ថិភាពដាច់ខាតនៃទិន្នន័យដែលចាត់ចែងដោយភាគីទីបីបានទេ។"
+              },
+              {
+                heading: "៦. ការចែករំលែកព័ត៌មាន",
+                content: "យើងមិនលក់ ដោះដូរ ឬចែករំលែកទិន្នន័យណាមួយដែលប្រមូលបានដោយយើងឡើយ។ រាល់ទិន្នន័យដែលប្រមូលបានដោយសេវាកម្មភាគីទីបី ត្រូវបានដំណើរការ និងប្រើប្រាស់ស្របតាមគោលការណ៍ផ្ទាល់ខ្លួនរបស់ពួកគេ។"
+              },
+              {
+                heading: "៧. ជម្រើសរបស់អ្នក",
+                content: "អ្នកអាចគ្រប់គ្រងការប្រមូលទិន្នន័យមួយចំនួនតាមរយៈការកំណត់ឧបករណ៍របស់អ្នក ដូចជាការកំណត់ការផ្សាយពាណិជ្ជកម្មផ្ទាល់ខ្លួន ឬការកំណត់លេខសម្គាល់ការផ្សាយពាណិជ្ជកម្មឡើងវិញ។ អ្នកក៏អាចបដិសេធការតាមដានការវិភាគមួយចំនួន ប្រសិនបើឧបករណ៍ ឬប្រព័ន្ធរបស់អ្នកគាំទ្រមុខងារនេះ។"
+              },
+              {
+                heading: "៨. ការផ្លាស់ប្តូរគោលការណ៍នេះ",
+                content: "យើងអាចធ្វើបច្ចុប្បន្នភាពគោលការណ៍ឯកជនភាពនេះពីពេលមួយទៅពេលមួយ។ រាល់ការផ្លាស់ប្តូរនឹងត្រូវបានបង្ហាញនៅក្នុងកម្មវិធី។ ការបន្តប្រើប្រាស់កម្មវិធីបន្ទាប់ពីការធ្វើបច្ចុប្បន្នភាព បញ្ជាក់ថាអ្នកយល់ព្រមតាមគោលការណ៍ដែលបានកែសម្រួល។"
+              },
+              {
+                heading: "៩. ការបដិសេធការទទួលខុសត្រូវ",
+                content: "កម្មវិធីនេះត្រូវបានបង្កើតឡើងសម្រាប់គោលបំណងអប់រំ និងការអនុវត្តតែប៉ុណ្ណោះ។ យើងមិនធានាថាការប្រើប្រាស់កម្មវិធីនេះនឹងនាំឱ្យជាប់ការប្រឡងបើកបរផ្លូវការណាមួយឡើយ។ អ្នកប្រើប្រាស់គួរតែយោងទៅប្រភពផ្លូវការសម្រាប់បទប្បញ្ញត្តិ និងតម្រូវការបើកបរដែលត្រឹមត្រូវ និងទាន់សម័យបំផុត។"
+              }
+            ]
+          }
+        };
+
+        function switchLanguage(language) {
+            const contentDiv = document.getElementById('privacy-content');
+            const translation = translations[language];
+            let content = `<h2>${translation.title}</h2><p>${translation.lastUpdated}</p>`;
+            translation.sections.forEach(section => {
+                content += `<h3>${section.heading}</h3><p>${section.content}</p>`;
+            });
+            contentDiv.innerHTML = content;
+        }
+
+        // Load English by default
+        switchLanguage('en');
+    </script>
+</body>
+</html>
