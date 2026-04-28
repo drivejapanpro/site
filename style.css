@@ -64,7 +64,7 @@ a:hover {
 
 #hero {
     text-align: center;
-    padding: 6rem 0;
+    padding: 3rem 0;
 }
 
 .hero-content h2 {
@@ -74,11 +74,18 @@ a:hover {
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-store-links {
+    margin-top: 2rem;
 }
 
 .app-store-links img {
-    height: 60px;
+    height: 50px;
     margin: 0.5rem;
     transition: transform 0.3s ease;
 }
@@ -88,27 +95,27 @@ a:hover {
 }
 
 section {
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .feature-list, .language-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .feature-item, .language-item {
     background-color: #ffffff;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
 
