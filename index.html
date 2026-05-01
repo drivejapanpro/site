@@ -113,7 +113,12 @@
         </main>
 
         <footer>
-           <p>&copy; {new Date().getFullYear()} Drive Japan Pro. All rights reserved.</p>
+          <p id="footer"></p>
+
+<script>
+document.getElementById("footer").innerHTML =
+  "&copy; " + new Date().getFullYear() + " Drive Japan Pro. All rights reserved.";
+</script>
         </footer>
     </div>
     <script src="script.js"></script>
