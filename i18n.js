@@ -1,0 +1,470 @@
+
+// ---------------------------------------------------------------------------
+// Language switcher + UI strings for drivejapanpro.com (all 14 app languages).
+// Choice is stored in localStorage under 'djp-lang'. Falls back to the
+// browser language, then English. fa and ur render right-to-left.
+const DJP_LANGS = ["en","ja","ne","hi","si","ur","vi","km","my","id","es","pt","tl","fa"];
+const DJP_LANG_NAMES = {"en":"English","ja":"日本語","ne":"नेपाली","hi":"हिन्दी","si":"සිංහල","ur":"اردو","vi":"Tiếng Việt","km":"ខ្មែរ","my":"မြန်မာ","id":"Bahasa Indonesia","es":"Español","pt":"Português","tl":"Filipino","fa":"فارسی"};
+const DJP_RTL = ["fa", "ur"];
+const DJP_I18N = {
+ "en": {
+  "navContact": "Contact Us",
+  "navContactM": "Contact us",
+  "footerRights": "© {year} Drive Japanpro. All rights reserved.",
+  "heroTitle": "Your Guide to Driving in Japan",
+  "heroSub": "The best app to help you prepare for the Japanese driving license exam.",
+  "heroBody": "Drive Japanpro is an educational app designed to help expats, tourists, and professionals pass the Japanese driver’s license written exams, including the learner’s permit, full permit, and foreign license conversion tests.",
+  "featuresTitle": "Features",
+  "feat1Title": "Practice Tests",
+  "feat1Body": "Hundreds of practice questions to get you ready for the exam.",
+  "feat2Title": "Flashcards",
+  "feat2Body": "Memorize important signs and rules with our flashcards.",
+  "feat3Title": "Signs and Markings",
+  "feat3Body": "A complete guide to all Japanese road signs and markings.",
+  "feat4Title": "Driving Course",
+  "feat4Body": "Learn the basics of driving in Japan.",
+  "feat5Title": "Moped (Gentsuki) Test",
+  "feat5Body": "Specific practice tests for the moped license.",
+  "languagesTitle": "Supported Languages",
+  "contactTitle": "Contact Us",
+  "contactIntro": "You can reach us through the following channels:",
+  "contactEmail": "You can also reach us by email at:",
+  "navPrivacy": "Privacy Policy",
+  "navPrivacyM": "Privacy policy",
+  "navTerms": "Terms",
+  "docTitlePrivacy": "Privacy Policy - Drive Japanpro",
+  "docTitleTerms": "Terms of Service - Drive Japanpro",
+  "docTitleContact": "Contact Us - Drive Japanpro"
+ },
+ "ja": {
+  "navContact": "お問い合わせ",
+  "navContactM": "お問い合わせ",
+  "footerRights": "© {year} Drive Japanpro. 無断転載・複製を禁じます。",
+  "heroTitle": "日本での運転ガイド",
+  "heroSub": "日本の自動車免許試験対策に最適なアプリです。",
+  "heroBody": "Drive Japanproは、外国人居住者、旅行者、専門家の方々が、仮免許・本免許・外国免許切替の筆記試験に合格できるよう設計された教育アプリです。",
+  "featuresTitle": "主な機能",
+  "feat1Title": "練習テスト",
+  "feat1Body": "試験対策に役立つ数百問の練習問題。",
+  "feat2Title": "フラッシュカード",
+  "feat2Body": "フラッシュカードで重要な標識やルールを覚えましょう。",
+  "feat3Title": "標識と路面表示",
+  "feat3Body": "日本のすべての道路標識と路面表示を網羅したガイド。",
+  "feat4Title": "運転コース",
+  "feat4Body": "日本での運転の基本を学びます。",
+  "feat5Title": "原付（Gentsuki）テスト",
+  "feat5Body": "原付免許専用の練習テスト。",
+  "languagesTitle": "対応言語",
+  "contactTitle": "お問い合わせ",
+  "contactIntro": "以下のチャンネルからお問い合わせいただけます：",
+  "contactEmail": "メールでのお問い合わせはこちら：",
+  "navPrivacy": "プライバシーポリシー",
+  "navPrivacyM": "プライバシーポリシー",
+  "navTerms": "利用規約",
+  "docTitlePrivacy": "プライバシーポリシー - Drive Japanpro",
+  "docTitleTerms": "利用規約 - Drive Japanpro",
+  "docTitleContact": "お問い合わせ - Drive Japanpro"
+ },
+ "ne": {
+  "navContact": "सम्पर्क गर्नुहोस्",
+  "navContactM": "सम्पर्क गर्नुहोस्",
+  "footerRights": "© {year} Drive Japanpro. सर्वाधिकार सुरक्षित।",
+  "heroTitle": "जापानमा ड्राइभिङका लागि तपाईंको गाइड",
+  "heroSub": "जापानी ड्राइभिङ लाइसेन्स परीक्षाको तयारीका लागि सबैभन्दा राम्रो एप।",
+  "heroBody": "Drive Japanpro प्रवासी, पर्यटक र पेशाकर्मीहरूलाई जापानी ड्राइभिङ लाइसेन्सको लिखित परीक्षा, जसमा सिकारु अनुमतिपत्र, पूर्ण अनुमतिपत्र र विदेशी लाइसेन्स रूपान्तरण परीक्षा पर्छन्, पास गर्न मद्दत गर्न बनाइएको शैक्षिक एप हो।",
+  "featuresTitle": "विशेषताहरू",
+  "feat1Title": "अभ्यास परीक्षा",
+  "feat1Body": "परीक्षाका लागि तयार पार्ने सयौं अभ्यास प्रश्नहरू।",
+  "feat2Title": "फ्ल्यासकार्डहरू",
+  "feat2Body": "हाम्रा फ्ल्यासकार्डहरूबाट महत्त्वपूर्ण संकेत र नियमहरू सम्झनुहोस्।",
+  "feat3Title": "संकेत र चिन्हहरू",
+  "feat3Body": "सबै जापानी सडक संकेत र चिन्हहरूको पूर्ण गाइड।",
+  "feat4Title": "ड्राइभिङ कोर्स",
+  "feat4Body": "जापानमा ड्राइभिङका आधारभूत कुराहरू सिक्नुहोस्।",
+  "feat5Title": "मोपेड (गेन्त्सुकी) परीक्षा",
+  "feat5Body": "मोपेड लाइसेन्सका लागि विशेष अभ्यास परीक्षाहरू।",
+  "languagesTitle": "समर्थित भाषाहरू",
+  "contactTitle": "सम्पर्क गर्नुहोस्",
+  "contactIntro": "तपाईं हामीलाई निम्न माध्यमहरूबाट सम्पर्क गर्न सक्नुहुन्छ:",
+  "contactEmail": "तपाईं हामीलाई इमेलबाट पनि सम्पर्क गर्न सक्नुहुन्छ:",
+  "navPrivacy": "गोपनीयता नीति",
+  "navPrivacyM": "गोपनीयता नीति",
+  "navTerms": "सेवाका सर्तहरू",
+  "docTitlePrivacy": "गोपनीयता नीति - Drive Japanpro",
+  "docTitleTerms": "सेवाका सर्तहरू - Drive Japanpro",
+  "docTitleContact": "सम्पर्क गर्नुहोस् - Drive Japanpro"
+ },
+ "hi": {
+  "navContact": "संपर्क करें",
+  "navContactM": "संपर्क करें",
+  "footerRights": "© {year} Drive Japanpro. सर्वाधिकार सुरक्षित।",
+  "heroTitle": "जापान में ड्राइविंग के लिए आपकी गाइड",
+  "heroSub": "जापानी ड्राइविंग लाइसेंस परीक्षा की तैयारी के लिए सबसे अच्छा ऐप।",
+  "heroBody": "Drive Japanpro एक शैक्षिक ऐप है जो प्रवासियों, पर्यटकों और पेशेवरों को जापानी ड्राइविंग लाइसेंस की लिखित परीक्षाएँ — लर्नर परमिट, पूर्ण परमिट और विदेशी लाइसेंस रूपांतरण परीक्षाएँ — पास करने में मदद करने के लिए बनाया गया है।",
+  "featuresTitle": "विशेषताएँ",
+  "feat1Title": "अभ्यास परीक्षण",
+  "feat1Body": "परीक्षा के लिए तैयार करने वाले सैकड़ों अभ्यास प्रश्न।",
+  "feat2Title": "फ़्लैशकार्ड",
+  "feat2Body": "हमारे फ़्लैशकार्ड से महत्वपूर्ण संकेत और नियम याद करें।",
+  "feat3Title": "संकेत और चिह्न",
+  "feat3Body": "सभी जापानी सड़क संकेतों और चिह्नों की संपूर्ण गाइड।",
+  "feat4Title": "ड्राइविंग कोर्स",
+  "feat4Body": "जापान में ड्राइविंग की बुनियादी बातें सीखें।",
+  "feat5Title": "मोपेड (गेंत्सुकी) परीक्षण",
+  "feat5Body": "मोपेड लाइसेंस के लिए विशेष अभ्यास परीक्षण।",
+  "languagesTitle": "समर्थित भाषाएँ",
+  "contactTitle": "संपर्क करें",
+  "contactIntro": "आप निम्नलिखित माध्यमों से हमसे संपर्क कर सकते हैं:",
+  "contactEmail": "आप हमें ईमेल द्वारा भी संपर्क कर सकते हैं:",
+  "navPrivacy": "गोपनीयता नीति",
+  "navPrivacyM": "गोपनीयता नीति",
+  "navTerms": "सेवा की शर्तें",
+  "docTitlePrivacy": "गोपनीयता नीति - Drive Japanpro",
+  "docTitleTerms": "सेवा की शर्तें - Drive Japanpro",
+  "docTitleContact": "संपर्क करें - Drive Japanpro"
+ },
+ "si": {
+  "navContact": "අප අමතන්න",
+  "navContactM": "අප අමතන්න",
+  "footerRights": "© {year} Drive Japanpro. සියලුම හිමිකම් ඇවිරිණි.",
+  "heroTitle": "ජපානයේ රිය පැදවීම සඳහා ඔබේ මාර්ගෝපදේශය",
+  "heroSub": "ජපන් රියදුරු බලපත්‍ර විභාගයට සූදානම් වීමට හොඳම යෙදුම.",
+  "heroBody": "Drive Japanpro යනු විදේශිකයන්ට, සංචාරකයන්ට සහ වෘත්තිකයන්ට ජපන් රියදුරු බලපත්‍ර ලිඛිත විභාග — ශිෂ්‍ය බලපත්‍රය, සම්පූර්ණ බලපත්‍රය සහ විදේශීය බලපත්‍ර පරිවර්තන විභාග — සමත් වීමට උපකාර කිරීම සඳහා නිර්මාණය කරන ලද අධ්‍යාපනික යෙදුමකි.",
+  "featuresTitle": "විශේෂාංග",
+  "feat1Title": "පුහුණු පරීක්ෂණ",
+  "feat1Body": "විභාගයට ඔබව සූදානම් කරන සිය ගණන් පුහුණු ප්‍රශ්න.",
+  "feat2Title": "ෆ්ලැෂ්කාඩ්",
+  "feat2Body": "අපගේ ෆ්ලැෂ්කාඩ් සමඟ වැදගත් සංඥා සහ නීති මතක තබා ගන්න.",
+  "feat3Title": "සංඥා සහ සලකුණු",
+  "feat3Body": "සියලුම ජපන් මාර්ග සංඥා සහ සලකුණු සඳහා සම්පූර්ණ මාර්ගෝපදේශය.",
+  "feat4Title": "රිය පැදවීමේ පාඨමාලාව",
+  "feat4Body": "ජපානයේ රිය පැදවීමේ මූලිකාංග ඉගෙන ගන්න.",
+  "feat5Title": "මොපෙඩ් (Gentsuki) පරීක්ෂණය",
+  "feat5Body": "මොපෙඩ් බලපත්‍රය සඳහා විශේෂ පුහුණු පරීක්ෂණ.",
+  "languagesTitle": "සහාය දක්වන භාෂා",
+  "contactTitle": "අප අමතන්න",
+  "contactIntro": "ඔබට පහත නාලිකා හරහා අප හා සම්බන්ධ විය හැක:",
+  "contactEmail": "ඔබට විද්‍යුත් තැපෑලෙන් ද අප අමතන්න පුළුවන්:",
+  "navPrivacy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
+  "navPrivacyM": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
+  "navTerms": "සේවා කොන්දේසි",
+  "docTitlePrivacy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය - Drive Japanpro",
+  "docTitleTerms": "සේවා කොන්දේසි - Drive Japanpro",
+  "docTitleContact": "අප අමතන්න - Drive Japanpro"
+ },
+ "ur": {
+  "navContact": "ہم سے رابطہ کریں",
+  "navContactM": "ہم سے رابطہ کریں",
+  "footerRights": "© {year} Drive Japanpro. جملہ حقوق محفوظ ہیں۔",
+  "heroTitle": "جاپان میں ڈرائیونگ کے لیے آپ کی رہنما",
+  "heroSub": "جاپانی ڈرائیونگ لائسنس امتحان کی تیاری کے لیے بہترین ایپ۔",
+  "heroBody": "Drive Japanpro ایک تعلیمی ایپ ہے جو تارکین وطن، سیاحوں اور پیشہ ور افراد کو جاپانی ڈرائیونگ لائسنس کے تحریری امتحانات — لرنر پرمٹ، مکمل پرمٹ اور غیر ملکی لائسنس کی تبدیلی کے امتحانات — پاس کرنے میں مدد کے لیے بنائی گئی ہے۔",
+  "featuresTitle": "خصوصیات",
+  "feat1Title": "مشقی ٹیسٹ",
+  "feat1Body": "امتحان کے لیے آپ کو تیار کرنے والے سینکڑوں مشقی سوالات۔",
+  "feat2Title": "فلیش کارڈز",
+  "feat2Body": "ہمارے فلیش کارڈز کے ساتھ اہم نشانات اور قوانین یاد کریں۔",
+  "feat3Title": "نشانات اور علامات",
+  "feat3Body": "تمام جاپانی سڑک کے نشانات اور علامات کی مکمل رہنما۔",
+  "feat4Title": "ڈرائیونگ کورس",
+  "feat4Body": "جاپان میں ڈرائیونگ کی بنیادی باتیں سیکھیں۔",
+  "feat5Title": "موپیڈ (Gentsuki) ٹیسٹ",
+  "feat5Body": "موپیڈ لائسنس کے لیے خصوصی مشقی ٹیسٹ۔",
+  "languagesTitle": "تعاون یافتہ زبانیں",
+  "contactTitle": "ہم سے رابطہ کریں",
+  "contactIntro": "آپ درج ذیل ذرائع سے ہم سے رابطہ کر سکتے ہیں:",
+  "contactEmail": "آپ ہمیں ای میل کے ذریعے بھی رابطہ کر سکتے ہیں:",
+  "navPrivacy": "رازداری کی پالیسی",
+  "navPrivacyM": "رازداری کی پالیسی",
+  "navTerms": "سروس کی شرائط",
+  "docTitlePrivacy": "رازداری کی پالیسی - Drive Japanpro",
+  "docTitleTerms": "سروس کی شرائط - Drive Japanpro",
+  "docTitleContact": "ہم سے رابطہ کریں - Drive Japanpro"
+ },
+ "vi": {
+  "navContact": "Liên hệ với chúng tôi",
+  "navContactM": "Liên hệ với chúng tôi",
+  "footerRights": "© {year} Drive Japanpro. Bảo lưu mọi quyền.",
+  "heroTitle": "Hướng dẫn lái xe tại Nhật Bản của bạn",
+  "heroSub": "Ứng dụng tốt nhất giúp bạn chuẩn bị cho kỳ thi bằng lái xe Nhật Bản.",
+  "heroBody": "Drive Japanpro là ứng dụng giáo dục được thiết kế để giúp người nước ngoài sinh sống tại Nhật, khách du lịch và các chuyên gia vượt qua các kỳ thi viết lấy bằng lái xe của Nhật Bản, bao gồm giấy phép tập lái, giấy phép chính thức và kỳ thi chuyển đổi bằng lái nước ngoài.",
+  "featuresTitle": "Tính năng",
+  "feat1Title": "Bài kiểm tra luyện tập",
+  "feat1Body": "Hàng trăm câu hỏi luyện tập giúp bạn sẵn sàng cho kỳ thi.",
+  "feat2Title": "Thẻ ghi nhớ",
+  "feat2Body": "Ghi nhớ các biển báo và quy tắc quan trọng với thẻ ghi nhớ của chúng tôi.",
+  "feat3Title": "Biển báo và vạch kẻ đường",
+  "feat3Body": "Hướng dẫn đầy đủ về tất cả các biển báo và vạch kẻ đường của Nhật Bản.",
+  "feat4Title": "Khóa học lái xe",
+  "feat4Body": "Học những kiến thức cơ bản về lái xe tại Nhật Bản.",
+  "feat5Title": "Bài kiểm tra xe máy (Gentsuki)",
+  "feat5Body": "Các bài kiểm tra luyện tập riêng cho bằng lái xe máy.",
+  "languagesTitle": "Ngôn ngữ được hỗ trợ",
+  "contactTitle": "Liên hệ với chúng tôi",
+  "contactIntro": "Bạn có thể liên hệ với chúng tôi qua các kênh sau:",
+  "contactEmail": "Bạn cũng có thể liên hệ với chúng tôi qua email tại:",
+  "navPrivacy": "Chính sách bảo mật",
+  "navPrivacyM": "Chính sách bảo mật",
+  "navTerms": "Điều khoản dịch vụ",
+  "docTitlePrivacy": "Chính sách bảo mật - Drive Japanpro",
+  "docTitleTerms": "Điều khoản dịch vụ - Drive Japanpro",
+  "docTitleContact": "Liên hệ với chúng tôi - Drive Japanpro"
+ },
+ "km": {
+  "navContact": "ទាក់ទងមកយើង",
+  "navContactM": "ទាក់ទងមកយើង",
+  "footerRights": "© {year} Drive Japanpro. រក្សាសិទ្ធិគ្រប់យ៉ាង។",
+  "heroTitle": "មគ្គុទ្ទេសក៍របស់អ្នកសម្រាប់ការបើកបរនៅជប៉ុន",
+  "heroSub": "កម្មវិធីល្អបំផុតដើម្បីជួយអ្នករៀបចំសម្រាប់ការប្រឡងយកបណ្ណបើកបរជប៉ុន។",
+  "heroBody": "Drive Japanpro គឺជាកម្មវិធីអប់រំដែលត្រូវបានរចនាឡើងដើម្បីជួយជនបរទេស អ្នកទេសចរ និងអ្នកជំនាញឱ្យប្រឡងជាប់ការប្រឡងសរសេរសម្រាប់បណ្ណបើកបរជប៉ុន រួមមានបណ្ណបើកបរសាកល្បង បណ្ណបើកបរពេញលេញ និងការប្រឡងបំប្លែងបណ្ណបើកបរបរទេស។",
+  "featuresTitle": "លក្ខណៈពិសេស",
+  "feat1Title": "ការប្រឡងអនុវត្ត",
+  "feat1Body": "សំណួរអនុវត្តរាប់រយសំណួរដើម្បីរៀបចំអ្នកសម្រាប់ការប្រឡង។",
+  "feat2Title": "កាតរៀន (Flashcards)",
+  "feat2Body": "ទន្ទេញសញ្ញា និងច្បាប់សំខាន់ៗជាមួយកាតរៀនរបស់យើង។",
+  "feat3Title": "សញ្ញា និងគំនូសសម្គាល់",
+  "feat3Body": "មគ្គុទ្ទេសក៍ពេញលេញអំពីសញ្ញាចរាចរណ៍ និងគំនូសសម្គាល់ផ្លូវទាំងអស់របស់ជប៉ុន។",
+  "feat4Title": "វគ្គរៀនបើកបរ",
+  "feat4Body": "រៀនមូលដ្ឋានគ្រឹះនៃការបើកបរនៅជប៉ុន។",
+  "feat5Title": "ការប្រឡងម៉ូតូ (Gentsuki)",
+  "feat5Body": "ការប្រឡងអនុវត្តពិសេសសម្រាប់បណ្ណបើកបរម៉ូតូ។",
+  "languagesTitle": "ភាសាដែលគាំទ្រ",
+  "contactTitle": "ទាក់ទងមកយើង",
+  "contactIntro": "អ្នកអាចទាក់ទងមកយើងតាមរយៈបណ្តាញខាងក្រោម៖",
+  "contactEmail": "អ្នកក៏អាចទាក់ទងមកយើងតាមអ៊ីមែលផងដែរ៖",
+  "navPrivacy": "គោលការណ៍ឯកជនភាព",
+  "navPrivacyM": "គោលការណ៍ឯកជនភាព",
+  "navTerms": "លក្ខខណ្ឌប្រើប្រាស់",
+  "docTitlePrivacy": "គោលការណ៍ឯកជនភាព - Drive Japanpro",
+  "docTitleTerms": "លក្ខខណ្ឌប្រើប្រាស់ - Drive Japanpro",
+  "docTitleContact": "ទាក់ទងមកយើង - Drive Japanpro"
+ },
+ "my": {
+  "navContact": "ကျွန်ုပ်တို့ထံ ဆက်သွယ်ပါ",
+  "navContactM": "ကျွန်ုပ်တို့ထံ ဆက်သွယ်ပါ",
+  "footerRights": "© {year} Drive Japanpro. မူပိုင်ခွင့်အားလုံး လက်ဝယ်ရှိသည်။",
+  "heroTitle": "ဂျပန်တွင် ကားမောင်းနှင်ခြင်းအတွက် သင့်လမ်းညွှန်",
+  "heroSub": "ဂျပန် ယာဉ်မောင်းလိုင်စင် စာမေးပွဲအတွက် ပြင်ဆင်ရန် အကောင်းဆုံး အက်ပ်။",
+  "heroBody": "Drive Japanpro သည် နိုင်ငံခြားနေထိုင်သူများ၊ ခရီးသွားများနှင့် ပညာရှင်များ ဂျပန် ယာဉ်မောင်းလိုင်စင် စာရေးဖြေ စာမေးပွဲများ — သင်ယူသူလိုင်စင်၊ အပြည့်အဝလိုင်စင်နှင့် နိုင်ငံခြားလိုင်စင် ပြောင်းလဲခြင်း စာမေးပွဲများ — ကို အောင်မြင်နိုင်ရန် ဒီဇိုင်းထုတ်ထားသော ပညာရေးအက်ပ်တစ်ခုဖြစ်သည်။",
+  "featuresTitle": "လုပ်ဆောင်ချက်များ",
+  "feat1Title": "လေ့ကျင့်ခန်း စာမေးပွဲများ",
+  "feat1Body": "စာမေးပွဲအတွက် အဆင်သင့်ဖြစ်စေမည့် လေ့ကျင့်ခန်းမေးခွန်း ရာနှင့်ချီ။",
+  "feat2Title": "ဖလက်ရှ်ကတ်များ",
+  "feat2Body": "ကျွန်ုပ်တို့၏ ဖလက်ရှ်ကတ်များဖြင့် အရေးကြီးသော ဆိုင်းဘုတ်များနှင့် စည်းမျဉ်းများကို မှတ်သားပါ။",
+  "feat3Title": "ဆိုင်းဘုတ်များနှင့် အမှတ်အသားများ",
+  "feat3Body": "ဂျပန် လမ်းဆိုင်းဘုတ်များနှင့် အမှတ်အသားအားလုံးအတွက် ပြည့်စုံသောလမ်းညွှန်။",
+  "feat4Title": "ယာဉ်မောင်းသင်တန်း",
+  "feat4Body": "ဂျပန်တွင် ကားမောင်းနှင်ခြင်း အခြေခံများကို လေ့လာပါ။",
+  "feat5Title": "မိုပက် (Gentsuki) စာမေးပွဲ",
+  "feat5Body": "မိုပက်လိုင်စင်အတွက် သီးသန့် လေ့ကျင့်ခန်း စာမေးပွဲများ။",
+  "languagesTitle": "ပံ့ပိုးထားသော ဘာသာစကားများ",
+  "contactTitle": "ကျွန်ုပ်တို့ထံ ဆက်သွယ်ပါ",
+  "contactIntro": "အောက်ပါချန်နယ်များမှတစ်ဆင့် ကျွန်ုပ်တို့ထံ ဆက်သွယ်နိုင်ပါသည်:",
+  "contactEmail": "အီးမေးလ်ဖြင့်လည်း ဆက်သွယ်နိုင်ပါသည်:",
+  "navPrivacy": "ကိုယ်ရေးအချက်အလက်မူဝါဒ",
+  "navPrivacyM": "ကိုယ်ရေးအချက်အလက်မူဝါဒ",
+  "navTerms": "ဝန်ဆောင်မှုစည်းမျဉ်းများ",
+  "docTitlePrivacy": "ကိုယ်ရေးအချက်အလက်မူဝါဒ - Drive Japanpro",
+  "docTitleTerms": "ဝန်ဆောင်မှုစည်းမျဉ်းများ - Drive Japanpro",
+  "docTitleContact": "ကျွန်ုပ်တို့ထံ ဆက်သွယ်ပါ - Drive Japanpro"
+ },
+ "id": {
+  "navContact": "Hubungi Kami",
+  "navContactM": "Hubungi Kami",
+  "footerRights": "© {year} Drive Japanpro. Seluruh hak cipta dilindungi.",
+  "heroTitle": "Panduan Anda untuk Mengemudi di Jepang",
+  "heroSub": "Aplikasi terbaik untuk membantu Anda mempersiapkan ujian SIM Jepang.",
+  "heroBody": "Drive Japanpro adalah aplikasi edukasi yang dirancang untuk membantu ekspatriat, wisatawan, dan profesional lulus ujian tertulis SIM Jepang, termasuk izin belajar, izin penuh, dan ujian konversi SIM asing.",
+  "featuresTitle": "Fitur",
+  "feat1Title": "Tes Latihan",
+  "feat1Body": "Ratusan soal latihan untuk mempersiapkan Anda menghadapi ujian.",
+  "feat2Title": "Kartu Flash",
+  "feat2Body": "Hafalkan rambu dan aturan penting dengan kartu flash kami.",
+  "feat3Title": "Rambu dan Marka",
+  "feat3Body": "Panduan lengkap untuk semua rambu lalu lintas dan marka jalan Jepang.",
+  "feat4Title": "Kursus Mengemudi",
+  "feat4Body": "Pelajari dasar-dasar mengemudi di Jepang.",
+  "feat5Title": "Tes Moped (Gentsuki)",
+  "feat5Body": "Tes latihan khusus untuk SIM moped.",
+  "languagesTitle": "Bahasa yang Didukung",
+  "contactTitle": "Hubungi Kami",
+  "contactIntro": "Anda dapat menghubungi kami melalui saluran berikut:",
+  "contactEmail": "Anda juga dapat menghubungi kami melalui email di:",
+  "navPrivacy": "Kebijakan Privasi",
+  "navPrivacyM": "Kebijakan Privasi",
+  "navTerms": "Ketentuan Layanan",
+  "docTitlePrivacy": "Kebijakan Privasi - Drive Japanpro",
+  "docTitleTerms": "Ketentuan Layanan - Drive Japanpro",
+  "docTitleContact": "Hubungi Kami - Drive Japanpro"
+ },
+ "es": {
+  "navContact": "Contáctanos",
+  "navContactM": "Contáctanos",
+  "footerRights": "© {year} Drive Japanpro. Todos los derechos reservados.",
+  "heroTitle": "Tu guía para conducir en Japón",
+  "heroSub": "La mejor aplicación para ayudarte a preparar el examen de licencia de conducir japonés.",
+  "heroBody": "Drive Japanpro es una aplicación educativa diseñada para ayudar a expatriados, turistas y profesionales a aprobar los exámenes escritos de la licencia de conducir japonesa, incluidos el permiso de aprendizaje, el permiso completo y los exámenes de conversión de licencias extranjeras.",
+  "featuresTitle": "Características",
+  "feat1Title": "Exámenes de práctica",
+  "feat1Body": "Cientos de preguntas de práctica para prepararte para el examen.",
+  "feat2Title": "Tarjetas de memoria",
+  "feat2Body": "Memoriza las señales y reglas importantes con nuestras tarjetas de memoria.",
+  "feat3Title": "Señales y marcas viales",
+  "feat3Body": "Una guía completa de todas las señales de tráfico y marcas viales japonesas.",
+  "feat4Title": "Curso de conducción",
+  "feat4Body": "Aprende los conceptos básicos de conducir en Japón.",
+  "feat5Title": "Examen de ciclomotor (Gentsuki)",
+  "feat5Body": "Exámenes de práctica específicos para la licencia de ciclomotor.",
+  "languagesTitle": "Idiomas compatibles",
+  "contactTitle": "Contáctanos",
+  "contactIntro": "Puedes contactarnos a través de los siguientes canales:",
+  "contactEmail": "También puedes contactarnos por correo electrónico en:",
+  "navPrivacy": "Política de Privacidad",
+  "navPrivacyM": "Política de Privacidad",
+  "navTerms": "Términos de Servicio",
+  "docTitlePrivacy": "Política de Privacidad - Drive Japanpro",
+  "docTitleTerms": "Términos de Servicio - Drive Japanpro",
+  "docTitleContact": "Contáctanos - Drive Japanpro"
+ },
+ "pt": {
+  "navContact": "Contacte-nos",
+  "navContactM": "Contacte-nos",
+  "footerRights": "© {year} Drive Japanpro. Todos os direitos reservados.",
+  "heroTitle": "O seu guia para conduzir no Japão",
+  "heroSub": "A melhor aplicação para o ajudar a preparar-se para o exame da carta de condução japonesa.",
+  "heroBody": "Drive Japanpro é uma aplicação educativa concebida para ajudar expatriados, turistas e profissionais a passar nos exames escritos da carta de condução japonesa, incluindo a licença de aprendizagem, a licença completa e os exames de conversão de cartas estrangeiras.",
+  "featuresTitle": "Funcionalidades",
+  "feat1Title": "Testes práticos",
+  "feat1Body": "Centenas de perguntas práticas para o preparar para o exame.",
+  "feat2Title": "Cartões de memorização",
+  "feat2Body": "Memorize os sinais e regras importantes com os nossos cartões de memorização.",
+  "feat3Title": "Sinais e marcações",
+  "feat3Body": "Um guia completo de todos os sinais de trânsito e marcações rodoviárias do Japão.",
+  "feat4Title": "Curso de condução",
+  "feat4Body": "Aprenda os conceitos básicos de conduzir no Japão.",
+  "feat5Title": "Teste de ciclomotor (Gentsuki)",
+  "feat5Body": "Testes práticos específicos para a licença de ciclomotor.",
+  "languagesTitle": "Idiomas suportados",
+  "contactTitle": "Contacte-nos",
+  "contactIntro": "Pode contactar-nos através dos seguintes canais:",
+  "contactEmail": "Também pode contactar-nos por e-mail em:",
+  "navPrivacy": "Política de Privacidade",
+  "navPrivacyM": "Política de Privacidade",
+  "navTerms": "Termos de Serviço",
+  "docTitlePrivacy": "Política de Privacidade - Drive Japanpro",
+  "docTitleTerms": "Termos de Serviço - Drive Japanpro",
+  "docTitleContact": "Contacte-nos - Drive Japanpro"
+ },
+ "tl": {
+  "navContact": "Makipag-ugnayan sa Amin",
+  "navContactM": "Makipag-ugnayan sa Amin",
+  "footerRights": "© {year} Drive Japanpro. Nakalaan ang lahat ng karapatan.",
+  "heroTitle": "Ang Iyong Gabay sa Pagmamaneho sa Japan",
+  "heroSub": "Ang pinakamahusay na app upang matulungan kang maghanda para sa pagsusulit sa lisensya sa pagmamaneho ng Japan.",
+  "heroBody": "Ang Drive Japanpro ay isang pang-edukasyong app na idinisenyo upang tulungan ang mga expat, turista, at propesyonal na makapasa sa mga nakasulat na pagsusulit para sa lisensya sa pagmamaneho ng Japan, kabilang ang learner’s permit, full permit, at mga pagsusulit sa conversion ng banyagang lisensya.",
+  "featuresTitle": "Mga Tampok",
+  "feat1Title": "Mga Pagsusulit sa Pagsasanay",
+  "feat1Body": "Daan-daang tanong sa pagsasanay upang maihanda ka para sa pagsusulit.",
+  "feat2Title": "Mga Flashcard",
+  "feat2Body": "Kabishan ang mahahalagang palatandaan at patakaran gamit ang aming mga flashcard.",
+  "feat3Title": "Mga Palatandaan at Marka",
+  "feat3Body": "Isang kumpletong gabay sa lahat ng palatandaang trapiko at marka sa kalsada ng Japan.",
+  "feat4Title": "Kurso sa Pagmamaneho",
+  "feat4Body": "Alamin ang mga pangunahing kaalaman sa pagmamaneho sa Japan.",
+  "feat5Title": "Pagsusulit sa Moped (Gentsuki)",
+  "feat5Body": "Mga partikular na pagsusulit sa pagsasanay para sa lisensya ng moped.",
+  "languagesTitle": "Mga Sinusuportahang Wika",
+  "contactTitle": "Makipag-ugnayan sa Amin",
+  "contactIntro": "Maaari mo kaming maabot sa pamamagitan ng mga sumusunod na channel:",
+  "contactEmail": "Maaari mo rin kaming maabot sa pamamagitan ng email sa:",
+  "navPrivacy": "Patakaran sa Pagkapribado",
+  "navPrivacyM": "Patakaran sa Pagkapribado",
+  "navTerms": "Mga Tuntunin ng Serbisyo",
+  "docTitlePrivacy": "Patakaran sa Pagkapribado - Drive Japanpro",
+  "docTitleTerms": "Mga Tuntunin ng Serbisyo - Drive Japanpro",
+  "docTitleContact": "Makipag-ugnayan sa Amin - Drive Japanpro"
+ },
+ "fa": {
+  "navContact": "تماس با ما",
+  "navContactM": "تماس با ما",
+  "footerRights": "© {year} Drive Japanpro. کلیه حقوق محفوظ است.",
+  "heroTitle": "راهنمای شما برای رانندگی در ژاپن",
+  "heroSub": "بهترین برنامه برای کمک به شما در آماده شدن برای آزمون گواهینامه رانندگی ژاپن.",
+  "heroBody": "Drive Japanpro یک برنامه آموزشی است که برای کمک به مهاجران، گردشگران و متخصصان طراحی شده است تا در آزمون‌های کتبی گواهینامه رانندگی ژاپن، از جمله گواهینامه موقت، گواهینامه کامل و آزمون‌های تبدیل گواهینامه خارجی، قبول شوند.",
+  "featuresTitle": "ویژگی‌ها",
+  "feat1Title": "آزمون‌های تمرینی",
+  "feat1Body": "صدها سؤال تمرینی برای آماده‌سازی شما برای آزمون.",
+  "feat2Title": "فلش‌کارت‌ها",
+  "feat2Body": "علائم و قوانین مهم را با فلش‌کارت‌های ما به خاطر بسپارید.",
+  "feat3Title": "علائم و نشانه‌ها",
+  "feat3Body": "راهنمای کامل همه علائم راهنمایی و رانندگی و نشانه‌های جاده‌ای ژاپن.",
+  "feat4Title": "دوره رانندگی",
+  "feat4Body": "اصول اولیه رانندگی در ژاپن را بیاموزید.",
+  "feat5Title": "آزمون موتورسیکلت گازی (Gentsuki)",
+  "feat5Body": "آزمون‌های تمرینی ویژه برای گواهینامه موتورسیکلت گازی.",
+  "languagesTitle": "زبان‌های پشتیبانی‌شده",
+  "contactTitle": "تماس با ما",
+  "contactIntro": "می‌توانید از طریق کانال‌های زیر با ما در تماس باشید:",
+  "contactEmail": "همچنین می‌توانید از طریق ایمیل با ما در تماس باشید:",
+  "navPrivacy": "سیاست حفظ حریم خصوصی",
+  "navPrivacyM": "سیاست حفظ حریم خصوصی",
+  "navTerms": "شرایط خدمات",
+  "docTitlePrivacy": "سیاست حفظ حریم خصوصی - Drive Japanpro",
+  "docTitleTerms": "شرایط خدمات - Drive Japanpro",
+  "docTitleContact": "تماس با ما - Drive Japanpro"
+ }
+};
+
+function djpEsc(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+function djpRenderLegal(lang) {
+  if (typeof DJP_LEGAL === "undefined") return;
+  function build(doc) {
+    if (!doc) return null;
+    let h = "<h2>" + djpEsc(doc.title) + "</h2>";
+    if (doc.lastUpdated) h += "<p>" + djpEsc(doc.lastUpdated) + "</p>";
+    doc.sections.forEach(function (s) {
+      h += "<h3>" + djpEsc(s.heading) + "</h3><p>" + djpEsc(s.content) + "</p>";
+    });
+    return h;
+  }
+  var pc = document.getElementById("privacy-content");
+  if (pc && DJP_LEGAL.privacy) { var ph = build(DJP_LEGAL.privacy[lang]); if (ph !== null) pc.innerHTML = ph; }
+  var tc = document.getElementById("terms-content");
+  if (tc && DJP_LEGAL.terms) { var th = build(DJP_LEGAL.terms[lang]); if (th !== null) tc.innerHTML = th; }
+}
+function djpApplyLang(lang) {
+  if (!DJP_I18N[lang]) lang = "en";
+  var dict = DJP_I18N[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = DJP_RTL.indexOf(lang) >= 0 ? "rtl" : "ltr";
+  var year = String(new Date().getFullYear());
+  document.querySelectorAll("[data-i18n]").forEach(function (el) {
+    var v = dict[el.getAttribute("data-i18n")];
+    if (typeof v === "string") el.textContent = v.split("{year}").join(year);
+  });
+  var tk = document.body ? document.body.getAttribute("data-title-key") : null;
+  if (tk && typeof dict[tk] === "string") document.title = dict[tk];
+  var sel = document.getElementById("djp-lang-switcher");
+  if (sel) sel.value = lang;
+  djpRenderLegal(lang);
+  try { localStorage.setItem("djp-lang", lang); } catch (e) {}
+}
+function djpDetectLang() {
+  var lang = null;
+  try { lang = localStorage.getItem("djp-lang"); } catch (e) {}
+  if (lang && DJP_I18N[lang]) return lang;
+  var nav = (navigator.language || "en").toLowerCase();
+  if (nav.indexOf("fil") === 0) return "tl";
+  for (var i = 0; i < DJP_LANGS.length; i++) {
+    var l = DJP_LANGS[i];
+    if (nav === l || nav.indexOf(l + "-") === 0) return l;
+  }
+  return "en";
+}
+document.addEventListener("DOMContentLoaded", function () {
+  var sel = document.getElementById("djp-lang-switcher");
+  if (sel) sel.addEventListener("change", function () { djpApplyLang(sel.value); });
+  djpApplyLang(djpDetectLang());
+});
