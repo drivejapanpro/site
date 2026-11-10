@@ -206,3 +206,26 @@ footer {
         margin: 0;
     }
 }
+
+/* Language switcher (i18n) */
+.lang-switcher {
+    margin-left: 1.5rem;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #212121;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    max-width: 12rem;
+}
+
+[dir="rtl"] .lang-switcher {
+    margin-left: 0;
+    margin-right: 1.5rem;
+}
+
+[dir="rtl"] li {
+    margin-left: 0;
+    margin-right: 1.5rem;
+}

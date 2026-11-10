@@ -6,7 +6,7 @@
     <title>Contact Us - Drive Japan Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-title-key="docTitleContact">
     <div class="container">
         <header>
             <nav>
@@ -15,22 +15,38 @@
                     <h1><a href="index.html">Drive Japan Pro</a></h1>
                 </div>
                 <ul class="desktop-nav">
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html" data-i18n="navPrivacy">Privacy Policy</a></li>
+                    <li><a href="terms.html" data-i18n="navTerms">Terms</a></li>
+                    <li><a href="contact.html" data-i18n="navContact">Contact Us</a></li>
                 </ul>
+                <select id="djp-lang-switcher" class="lang-switcher" aria-label="Language">
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ne">नेपाली</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="si">සිංහල</option>
+                    <option value="ur">اردو</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="km">ខ្មែរ</option>
+                    <option value="my">မြန်မာ</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="tl">Filipino</option>
+                    <option value="fa">فارسی</option>
+                </select>
             </nav>
         </header>
         <ul class="mobile-nav">
-            <li><a href="privacy.html">Privacy policy</a></li>
-            <li><a href="terms.html">Terms</a></li>
-            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="privacy.html" data-i18n="navPrivacyM">Privacy policy</a></li>
+            <li><a href="terms.html" data-i18n="navTerms">Terms</a></li>
+            <li><a href="contact.html" data-i18n="navContactM">Contact us</a></li>
         </ul>
 
         <main>
             <section>
-                <h2>Contact Us</h2>
-                <p>You can reach us through the following channels:</p>
+                <h2 data-i18n="contactTitle">Contact Us</h2>
+                <p data-i18n="contactIntro">You can reach us through the following channels:</p>
                 <div class="social-links">
                     <a href="https://www.tiktok.com/@drivejapanpro"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" alt="TikTok"></a>
                     <a href="https://www.instagram.com/drivejapanpro/"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram"></a>
@@ -38,13 +54,14 @@
                     <a href="https://www.facebook.com/drivejapanpro"><img src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg" alt="Facebook"></a>
                     <a href="https://api.whatsapp.com/send?phone=819036941343"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
                 </div>
-                <p>You can also reach us by email at: <a href="mailto:drivejapanpro@gmail.com">drivejapanpro@gmail.com</a></p>
+                <p><span data-i18n="contactEmail">You can also reach us by email at:</span> <a href="mailto:drivejapanpro@gmail.com">drivejapanpro@gmail.com</a></p>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2023 Drive Japan Pro. All rights reserved.</p>
+            <p data-i18n="footerRights">&copy; 2026 Drive Japanpro. All rights reserved.</p>
         </footer>
     </div>
+    <script src="i18n.js"></script>
 </body>
 </html>
