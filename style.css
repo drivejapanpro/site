@@ -229,3 +229,55 @@ footer {
     margin-left: 0;
     margin-right: 1.5rem;
 }
+
+/* Header overflow fix (mobile): keep logo + title + language switcher inside the viewport */
+header {
+    max-width: 100%;
+}
+
+nav {
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.logo {
+    min-width: 0;
+}
+
+.lang-switcher {
+    flex-shrink: 1;
+    min-width: 0;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+
+    nav {
+        row-gap: 0.5rem;
+    }
+
+    .logo img {
+        height: 32px;
+        margin-right: 0.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.15rem;
+    }
+
+    .lang-switcher {
+        margin-left: 0;
+        margin-inline-start: auto;
+        padding: 0.3rem 0.4rem;
+        font-size: 0.9rem;
+        max-width: 42vw;
+    }
+
+    [dir="rtl"] .lang-switcher {
+        margin-right: 0;
+        margin-inline-start: auto;
+    }
+}
